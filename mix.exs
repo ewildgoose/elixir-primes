@@ -25,5 +25,8 @@ defmodule Primes.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
+    [{:earmark, "~> 0.2.0", only: :docs},
+     {:ex_doc, "~> 0.11.0", only: :docs},
+     {:priority_queue, "~> 1.0.0"}]
   end
 end
