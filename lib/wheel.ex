@@ -24,7 +24,7 @@ defmodule Math.Wheel do
   @doc """
   Returns a stream to generate numbers in sequence
 
-      iex> Math.Wheel.spin_wheel |> Enum.take 5
+      iex> Math.Wheel.spin_wheel |> Enum.take(5)
       [11, 13, 17, 19, 23]
   """
   def spin_wheel do

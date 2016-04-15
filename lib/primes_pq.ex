@@ -66,7 +66,7 @@ defmodule Math.Primes do
 
   ## Examples
 
-      iex> Math.Primes.sieve |> Enum.take 5
+      iex> Math.Primes.sieve |> Enum.take(5)
       [2, 3, 5, 7, 11]
   """
   def sieve do
@@ -125,14 +125,6 @@ defmodule Math.Primes do
       {_min, _v}                 -> {x, {insert_prime(pq, x, wheel), wheel}}
       # :error                    -> {x, {insert_prime(pq, x, wheel), wheel}}
     end
-  end
-
-
-  def benchmark do
-    s = :erlang.now
-    sieve(10_000_000)
-    e = :erlang.now
-    IO.inspect :timer.now_diff(e, s) / (1000 * 1000)
   end
 
 end
